@@ -101,37 +101,93 @@ footer{
 }
 
 
-
 /*Your Code Here*/
 /* PLEASE DO NOT REMOVE MY COMMENTS.  THEY HELP US HELP YOU DEBUG. */
 
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
 
-
+a:hover {
+  text-decoration: underline;
+}
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
 
+.skip a{
+  position: absolute;
+  top: -40px;
+
+}
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-
+a.skip:focus{
+  top: 20px;
+}
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
-
+:focus{
+  outline: 2px solid black;
+}
 
 
 /* Step 4: Write selector/rule property to style the container */
+.container{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-gap: 15px;
+}
 
-
+img{
+  width: 100%
+}
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
-
-
+.container > :first-child{
+  grid-column: 1/-1;
+  min-height: 500px;
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
  four rows in the grid. */
+ /*This will be a lot of rules.... but be strategic and combine selectors*/
 
-      /*This will be a lot of rules.... but be strategic and combine seletors*/
+ .about{
+  grid-column: 2/3;
+  grid-row: 2/2;
+ }
+
+ .method{
+  grid-column: 2/3;
+  grid-row: 3/3;
+ }
+
+ .clients{
+  grid-column: 2/3;
+  grid-row: 4/4;
+ }
+
+ .contact{
+  grid-column: 2/3;
+  grid-row: 5/5;
+ }
+
+ .about-image{
+  grid-column: 1/-1;
+  grid-row: 2/2;
+ }
+
+ .method-image{
+  grid-column: 1/-1;
+  grid-row: 3/3;
+ }
+
+ .
 
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
